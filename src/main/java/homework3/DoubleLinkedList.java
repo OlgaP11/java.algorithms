@@ -86,6 +86,24 @@ public class DoubleLinkedList {
         return false;
     }
 
+    public void bubbleSort (){
+        boolean flag;
+        Node temp = new Node();
+        do{
+            flag = true;
+            Node currentNode = head;
+            while (currentNode.next != null){
+                if (currentNode.value > currentNode.next.value){
+                    temp.value = currentNode.value;
+                    currentNode.value = currentNode.next.value;
+                    currentNode.next.value = temp.value;
+                    flag = false;
+                }
+                currentNode = currentNode.next;
+            }
+        } while (!flag);
+    }
+
     public void print (){
         Node currNode = head;
         while (currNode != null){

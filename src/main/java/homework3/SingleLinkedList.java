@@ -108,6 +108,29 @@ public class SingleLinkedList {
         return false;
     }
 
+    public void bubbleSort (){
+        boolean flag;
+        Node temp = new Node();
+        do{
+            flag = true;
+            Node currentNode = head;
+            while (currentNode.next != null){
+                if (currentNode.value > currentNode.next.value){
+                    temp.value = currentNode.value;
+                    currentNode.value = currentNode.next.value;
+                    currentNode.next.value = temp.value;
+                    flag = false;
+                }
+                currentNode = currentNode.next;
+            }
+        } while (!flag);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%d", head.value);
+    }
+
     public void print (){
         Node currNode = head;
         while (currNode != null){

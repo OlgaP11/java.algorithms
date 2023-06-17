@@ -27,5 +27,30 @@ public class Main {
         System.out.println("Вывод трех элементов с конца списка: ");
         list2.elementsFromEnd(3);
 
+        SingleLinkedList list3 = new SingleLinkedList();
+        list3.addLast(5);
+        list3.addLast(2);
+        list3.addLast(6);
+        list3.addLast(3);
+        list3.addLast(1);
+        list3.addLast(4);
+
+        list3.print();
+
+        list3.bubbleSort();
+        list3.print();
+
+        DoubleLinkedList list4 = new DoubleLinkedList();
+        list4.addLast(5);
+        list4.addLast(2);
+        list4.addLast(6);
+        list4.addLast(3);
+        list4.addLast(1);
+        list4.addLast(4);
+
+        list4.print();
+
+        list4.bubbleSort();
+        list4.print();
     }
 }
